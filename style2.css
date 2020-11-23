@@ -1,51 +1,34 @@
-body{
-    margin-top: -20px;
-}
-header nav img {
-    width: auto ;
-    height: auto;
-    max-width: 170px;
-    max-height: 100px;
-    position: relative;
-    left: 40px;
-    top: -5px;
-
-}
 nav{
-    width: 100%;
-    height: 90px;
-    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
     background-color: grey;
-    color: #dcb235;
+    
 }
-nav ul{
-    float: right;
-    position: relative;
-    list-style-type: none;
-    font-size: 20px;
-    top: 10px;
+#main{
+    overflow: auto;}
+
+
+.nav-links{
+    display: flex;
+    justify-content: flex-end;
+    width: 65%; 
 }
-nav ul li{
-    display: inline;
+
+.nav-links li{
+    list-style: none;
     padding-left: 20px;
     padding-right: 20px;
 }
-nav a{
+
+.nav-links a{
+    color:  #dcb235;
     text-decoration: none;
-    color: #dcb235;
+    font-size: 1.2vw;
 }
-nav a:hover{
-    text-decoration: underline;
-    color: white;
-}
-
-#test{
-    position: relative;
-    top: 1000px;
-}
-
-.flex-container{
-    display: flex;
+.nav-links a:hover{
+    color:white;
 }
 .burger{
     display: none;
@@ -58,8 +41,19 @@ nav a:hover{
     background-color: black;
     margin: 3.5px;
 }
+header nav img {
+    width: auto ;
+    height: auto;
+    max-width: 170px;
+    max-height: 100px;
+    position: relative;
+    left: 40px;
+    top: -5px;
+
+}
+
 @media screen and (max-width:1024px){
-    nav ul{
+    .nav-links{
         width: 60%;
     }
 }
@@ -68,21 +62,25 @@ nav a:hover{
     body{
       overflow-x: hidden;
     }
-    nav ul{
+    .nav-links{
         position: absolute;
         right: 0px;
         height: 92vh;
-        top: 8vh;
-        background-color: rgba(240, 248, 255, 0.918) ;
+        top: 9.1vh;
+        background-color: grey ;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-        width: 50%;
+        width: 20%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
-    nav ul li{
+    .nav-links li{
         opacity: 0;
+    }
+    .nav-links a{
+        font-size: 20px;
     }
     .burger{
         display: block;
@@ -102,4 +100,14 @@ nav a:hover{
         transform: translateX(0px);
     }
 }
+.toggle .line1{
+    transform: rotate(-45deg) translate(-3px,3px);
+}
 
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
