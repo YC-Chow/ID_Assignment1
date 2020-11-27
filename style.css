@@ -1,9 +1,13 @@
+/* ------------------------------------------------------------------------ */
+/* Background */
 body{
     background-image: url("bg.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* ------------------------------------------------------------------------ */
+/* Navigation Bar */
 nav{
     display: flex;
     justify-content: space-around;
@@ -12,11 +16,6 @@ nav{
     background-color: grey;
     
 }
-#main{
-    overflow: auto;
-}
-
-
 .nav-links{
     display: flex;
     justify-content: flex-end;
@@ -38,6 +37,7 @@ nav{
 .nav-links a:hover{
     color:white;
 }
+/* The three line icon for nav bar when minimized */
 .burger{
     display: none;
     cursor: pointer;
@@ -49,6 +49,7 @@ nav{
     background-color: black;
     margin: 3.5px;
 }
+/* Icon left side of navigation bar */
 header nav img {
     width: auto ;
     height: auto;
@@ -59,7 +60,8 @@ header nav img {
     top: -5px;
 
 }
-
+/* ------------------------------------------------------------------------ */
+/* footer */
 footer{
     position: absolute;
     min-width: 100%;
@@ -69,6 +71,7 @@ footer{
     font-family: 'Courier New', Courier, Arial;
     background-color: lightgray;
 }
+/* Social media icons in footer */
 #social{
     position: relative;
     top: 2%;
@@ -79,14 +82,18 @@ footer{
     padding-right: 5px;
     padding-bottom: -5px;
 }
+/* ------------------------------------------------------------------------ */
+/* Content of the page */
 section{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     min-height: calc(90vh - 50px);
 }
+/* Main header in the page(tells what this page is about) */
 section h1{
     font-size: 50px;
 }
+/* sub header(if any) */
 section h2{
     font-size: 40px;
 }
@@ -95,6 +102,8 @@ section h2{
     display: flex;
     justify-content: center;
 }
+/* ------------------------------------------------------------------------ */
+/* Media queries */
 
 @media screen and (max-width:1024px){
     .nav-links{
@@ -106,6 +115,8 @@ section h2{
     body{
       overflow-x: hidden;
     }
+/* ------------------------------------------------------------------------ */
+/* Media queries for nav bar */
     .nav-links{
         position: absolute;
         right: 0px;
@@ -123,13 +134,16 @@ section h2{
     }
     .nav-links li{
         opacity: 0;
+        text-align: center;
     }
     .nav-links a{
-        font-size: 20px;
+        font-size: 15px;
     }
     .burger{
         display: block;
     }
+/* ------------------------------------------------------------------------ */
+
     footer{
         z-index: -1;
     }
@@ -138,6 +152,8 @@ section h2{
 	}
 	
 }
+/* ------------------------------------------------------------------------ */
+/* Animation for the nav bar when minimized */
 .nav-active{
     transform: translateX(0%);
 }
@@ -163,3 +179,4 @@ section h2{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+/* ------------------------------------------------------------------------ */
