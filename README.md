@@ -8,6 +8,8 @@ interesting or useful information about me.
 The purpose of this website is to promote myself to potential employers.
 This website contains useful informations that is precise and clear.
 Visitors of this website can easily find out the skillset i have.
+General structure of the website is a navigation bar at the top for easy access to other pages,
+content of the page in the middle and a footer and the end.
 # Features
 All pages has a footer and a nav bar
 Index - A home page with a description of myself and a picture
